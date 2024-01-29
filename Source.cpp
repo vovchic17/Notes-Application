@@ -38,7 +38,7 @@ void indexHandler(const Request& req, Response& res) {
     Result resp = Client("localhost").Get("/page.html");
     string html = resp->body;
     html.replace(html.find("notes"), 5, notesHtml);
-    res.set_content(html, "text/html;");
+    res.set_content(html, "text/html");
 }
 
 void addNoteHandler(const httplib::Request& req, httplib::Response& res) {
